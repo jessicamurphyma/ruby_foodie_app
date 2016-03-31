@@ -9,9 +9,12 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'devise', '~> 3.5', '>= 3.5.6'
+
 
 group :development, :test do
   gem 'byebug'
+  gem 'better_errors', '~> 2.1', '>= 2.1.1'
 end
 
 group :development do
@@ -19,3 +22,6 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
