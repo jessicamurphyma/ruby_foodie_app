@@ -4,4 +4,9 @@
   <%= f.input :website %>
   <%= f.input :description %>
   <%= f.button :submit, class: "btn btn-primary" %>
+
+	<div class="field">
+ 		<%= f.hidden_field :user_id, value: current_user.id %>
+	</div>
+
 <% end %>
