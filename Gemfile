@@ -18,6 +18,8 @@ gem 'simple_form'
 group :development, :test do
   gem 'byebug'
   gem 'better_errors', '~> 2.1', '>= 2.1.1'
+  gem 'pry'
+  gem 'pry-rails'
 end
 
 group :development do

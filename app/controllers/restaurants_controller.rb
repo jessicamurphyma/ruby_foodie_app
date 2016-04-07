@@ -1,5 +1,5 @@
 class RestaurantsController < ApplicationController
-    before_action :set_restaurant, only: [:show, :edit, :update]
+    before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
     
     def index
         @restaurants = Restaurant.all
@@ -34,9 +34,8 @@ class RestaurantsController < ApplicationController
     end
     
     def destroy
-        @restaurant.destroy
-        respond_to do |format|
-            format.html { redirect_to restaurants_url, notice: 'Restaurant was successfully destroy.'}
+        if @restaurant.destroy
+            redirect_to restaurants_path, notice: "Restaurant was successfully destroyed."
         end    
     end
 
