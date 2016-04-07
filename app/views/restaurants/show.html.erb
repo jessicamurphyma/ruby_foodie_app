@@ -7,3 +7,9 @@
 <br>
 
 <%= link_to "Create a Review", new_restaurant_review_path(@restaurant) %>
+
+<% @reviews.each do |r| %>
+	<p><%= r.description %></p>
+	<p><%= r.rating %></p>
+	
+<% end %>
