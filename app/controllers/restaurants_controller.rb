@@ -34,6 +34,10 @@ class RestaurantsController < ApplicationController
     end
     
     def destroy
+        @restaurant.destroy
+        respond_to do |format|
+            format.html { redirect_to restaurants_url, notice: 'Restaurant was successfully destroy.'}
+        end    
     end
 
 private
